@@ -1,0 +1,64 @@
+<!DOCTYPE htlm>
+<html>
+<head>
+<title>Simple</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/libs/ember-0.9.5.min.js"></script>
+	<script src="js/app.js"></script> 
+	<script>
+	// Songs: name of the application
+	Songs = Ember.Application.create({
+			mixmaster: 'Andy',
+			totalReviews: 0,
+			ready: function() {
+				console.log("Ember sings hi");
+			}
+	});
+
+	//Song: name of the Model
+	Songs.Song = Ember.Object.extend({
+			title: null,
+			artist: null,
+			genre: null,
+			listens: 0
+	});
+	
+	
+	Songs.songsController = Ember.ArrayController.create({
+			content: [],
+			init: function() {
+				// create an instance of the Song model
+				var song=Songs.Song.create({
+				title: 'Son of the morning',
+				artist: 'On, Sleeper',
+				genre: 'Screamo'
+				});
+				this.pushObject(song);
+			}
+	});
+	
+	Songs.ReviewTextArea = Ember.TextArea.extend({
+			placeholder: 'Enter your review'
+	});
+	</script>
+</head>
+<body>
+<h1>Simple 1</h1>
+<script type="text/x-handlebars">
+Hello <b>{{Songs.mixmaster}}</b>
+My songs have {{Songs.totalReviews}} reviews
+<br />
+{{#if Songs.totalReviews}}
+Read all my reviews
+{{else}}
+There are no reviews right now.
+{{/if}}
+{{#each Songs.songsController}}
+<h3>{{title}}</h3>
+<p>{{artist}} - {{genre}}</p>
+{{/each}}
+<br />
+{{view Songs.ReviewTextArea}}
+</script>
+</body>
+</html>

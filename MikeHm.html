@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+<meta charset=utf-8 />
+<title>Ember.js Tree Example</title>
+
+<script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
+<script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.js"></script>
+<script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.1/ember.js"></script>
+<script type='text/javascript'>
+  App = Ember.Application.create({});
+</script>
+<script type='text/javascript'>
+App.ApplicationController = Ember.Controller.extend({
+    message: 'This is the application template' 
+});
+</script>
+<script type='text/javascript'>
+  App.Router.map(function() {
+    this.route("index", { path: "/" });
+    this.route("list", { path: "/list" });
+  });
+
+  App.IndexController = Ember.Controller.extend({
+    message: 'Hello! See how index.hbs is evaluated in the context of IndexController' 
+  });
+
+  App.ListRoute = Ember.Route.extend({
+    setupController: function(controller) {
+      controller.set('content', ['angular.js', 'backbone.js', 'ember.js']);
+    }
+  });
+
+</script>
+</head>
+<body>
+<script type="text/x-handlebars" data-template-name="application">
+      <div class="container">
+          <h1>Ember.js is easy?<small> Minimum Viable Ember.js QuickStart Guide</small></h1>
+        <p>{{message}}</p>
+        <div class="row">
+          {{#linkTo index class="span3 btn btn-large btn-block"}}Home{{/linkTo}}
+          {{#linkTo list class="span3 btn btn-large btn-block"}}List{{/linkTo}}
+        </div>
+        {{outlet}}
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="list">
+      <h3 class="demo-panel-title">This is the list template</h3>
+      <ul>
+      {{#each item in content}}
+          <li>{{item}}</li>
+      {{/each}}
+       </ul>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="index">
+      <h3 class="demo-panel-title">This is the index template</h3>
+      <p>{{message}}</p>
+    </script>
+  
+</body>
+</html>

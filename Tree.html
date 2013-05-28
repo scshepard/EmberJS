@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    color: #444;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding: 30px;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 1.2em;
+    margin: 0px 0px 10px 0px;
+}
+
+/* Branch */
+.tree-branch {
+    padding: 0px;
+    margin: 0px;
+}
+.tree-node .tree-branch {
+    padding-left: 10px; /* Nested tree branches should be indented */
+}
+
+/* Node */
+.tree-node {
+    list-style: none;
+    line-height: 20px;
+}
+
+/* Arrow */
+.tree-node .toggle-icon {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    margin-right: 0px;
+    font-size: 10px;
+}
+.tree-node .toggle-icon:hover {
+    opacity: 0.8;
+}
+.tree-node .toggle-icon.leaf {
+    visibility: hidden;
+}
+
+/* Node text */
+.tree-node .text {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.tree-node .text:hover {
+    text-decoration: none;
+}
+</style>
+<meta charset=utf-8 />
+<title>Ember.js Tree Example</title>
+
+<script src="jquery-1.9.1.js"></script>
+<script src="handlebars-1.0.0-rc.3.js"></script>
+<script src="ember-1.0.0-rc.1.js"></script>
+<script type='text/javascript'>
+  App = Ember.Application.create({});
+</script>
+<script type='text/javascript'>
+App.ApplicationController = Ember.Controller.extend({
+    message: 'This is the application template' 
+});
+</script>
+<script type='text/javascript'>
+  App.Router.map(function() {
+    this.route("index", { path: "/" });
+    this.route("list", { path: "/list" });
+    this.route("other", {path: "/other" });
+  });
+
+  App.IndexController = Ember.Controller.extend({
+    message: 'Hello! See how index.hbs is evaluated in the context of IndexController' 
+  });
+
+  App.ListRoute = Ember.Route.extend({
+    setupController: function(controller) {
+      controller.set('content', ['angular.js', 'backbone.js', 'ember.js']);
+      controller.set('other', ['a', 'b', 'f']);
+    }
+  });
+
+</script>
+</head>
+<body>
+<script type="text/x-handlebars" data-template-name="application">
+      <div class="container">
+          <h1>Ember.js is easy?<small> Minimum Viable Ember.js QuickStart Guide</small></h1>
+        <p>{{message}}</p>
+        <div class="row">
+          {{#linkTo index class="span3 btn btn-large btn-block"}}Home{{/linkTo}}
+          {{#linkTo list class="span3 btn btn-large btn-block"}}List{{/linkTo}}
+	  {{#linkTo other class=""}}Other{{/linkTo}}
+        </div>
+        {{outlet}}
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="list">
+      <h3 class="demo-panel-title">This is the list template</h3>
+      <ul>
+      {{#each item in content}}
+          <li>{{item}}</li>
+      {{/each}}
+       </ul>
+    </script>
+    
+    <script type="text/x-handlebars" data-template-name="other">
+    <h3 class="demo-panel-title">This is the other template</h3>
+    <ul>
+    {{#each item in other}}
+   	 <li>{{item}}</li>
+    {{/each}}
+    </ul>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="index">
+      <h3 class="demo-panel-title">This is the index template</h3>
+      <p>{{message}}</p>
+    </script>
+  
+</body>
+</html>

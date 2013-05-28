@@ -1,0 +1,563 @@
+/*
+	Standard location for all "city" query related style
+*/
+
+/*
+	Here's entire "new look"
+*/
+a:hover {
+	color: #093;
+	text-decoration: none;
+}
+
+a:link {
+	text-decoration: none;
+	color: #03c;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #03c;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.SelectOptionNew {
+	display: block;
+	float: left;
+	margin-left: 14em;
+	margin-top: -1.0em;
+	background-color: white;
+	color: #03C;
+}
+
+.inputErrorNew {
+	position: absolute;
+	font-size: 90%;
+	margin-left: 4.1em;
+	color: pink;
+}
+
+.inputSpecialNew {
+	position: absolute;
+	font-size: 90%;
+	margin-left: 4.1em;
+	background-color: #03C;
+	color: white;
+}
+
+fieldset.optionGroupNew input {
+	display: inline;
+	float: left;
+	width: 12px;
+	height: 12px;
+}
+
+.optionGroupLabel {
+	position: absolute;
+	margin-left: 4.1em;
+	width: 40em;
+	color: purple;
+	background-color: orange;
+}
+
+.inputReadOnlyNew {
+	position: absolute;
+	width: 14em;
+	width: 40em;
+	margin-left: 4.2em;
+	font-size: 90%;
+	text-align: center;
+	color: #03C;
+}
+
+.inputReadOnlyNewShort {
+	position: absolute;
+	width: 14em;
+	margin-left: 4.2em;
+	font-size: 90%;
+	text-align: center;
+	color: #03C;
+	color: purple;
+}
+
+.inputDisplayNew {
+	position: absolute;
+	font-size: 90%;
+	left: 16.0em;
+	left: 15.6em;
+	color: #03C;
+	width: 40em;
+}
+
+.entryDisplayNew {
+	width: 14em;
+	font-size: 90%;
+	text-align: center;
+	color: #03C;
+}
+
+#wrapper {
+	height: 875px;
+	width: 1240px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.heading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.7em;
+	font-weight: bolder;
+	color: #000;
+}
+
+.subheads {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.4em;
+	font-weight: bolder;
+	color: #03C;
+}
+
+.foundInfo {
+	color: red;
+}
+
+#subWrapper {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+}
+
+#subWrapperMain {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 11%;
+}
+
+#SWzz0 {
+	width: 1240px;
+	display:none;
+	font-size: 3em;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 100px;
+}
+
+#subWrapper0 {
+	width: 1240px;
+	display:none;
+	font-size: 3em;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 100px;
+}
+
+#subWrapper1 {
+	width: 1240px;
+	display:none;
+	font-size: 3em;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 130px;
+}
+
+#subWrapper2 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 160px;
+}
+
+#subWrapper3 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 190px;
+}
+
+#subWrapper4 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 220px;
+}
+
+#subWrapper5 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 250px;
+}
+
+#subWrapper6 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 280px;
+}
+
+#subWrapper7 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 310px;
+}
+
+#subWrapper8 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 340px;
+}
+
+#subWrapper9 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 370px;
+}
+
+#subWrapper10 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 400px;
+}
+
+#subWrapper11 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 430px;
+}
+
+#subWrapper12 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 460px;
+}
+
+#subWrapper13 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 490px;
+}
+
+#subWrapper14 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 520px;
+}
+
+#subWrapper15 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 550px;
+}
+
+#subWrapper16 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 580px;
+}
+
+#subWrapper17 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 610px;
+}
+
+#subWrapper18 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 640px;
+}
+
+#subWrapper19 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 670px;
+}
+
+#subWrapper20 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 700px;
+}
+
+#subWrapper21 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 730px;
+}
+
+#subWrapper22 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 760px;
+}
+
+#subWrapper23 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 790px;
+}
+
+#subWrapper24 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 820px;
+}
+
+#subWrapper25 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 850px;
+}
+
+#subWrapper26 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 880px;
+}
+
+#subWrapper27 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 910px;
+}
+
+#subWrapper28 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 940px;
+}
+
+#subWrapper29 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 970px;
+}
+
+#subWrapper30 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1000px;
+}
+
+#subWrapper31 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1030px;
+}
+
+#subWrapper32 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1060px;
+}
+
+#subWrapper33 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1090px;
+}
+
+#subWrapper34 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1120px;
+}
+
+#subWrapper35 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1150px;
+}
+
+#subWrapper36 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1180px;
+}
+
+#subWrapper37 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1210px;
+}
+
+#subWrapper38 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1240px;
+}
+
+#subWrapper39 {
+	width: 1240px;
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-left: 1%;
+	top: 1270px;
+}
+
+#bump {
+	overflow: auto;
+}
+
+.statesCol1 {
+	position: inherit;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	width: 20%;
+	margin-left: 1%;
+	font-weight: bolder;
+	text-align: left;
+	color: #03C;
+	color: pink;
+}
+
+.statesCol2 {
+	position: inherit;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	margin-left: 26%;
+	width: 20%;
+	font-weight: bolder;
+	text-align: left;
+	color: #03C;
+	color: pink;
+}
+
+.statesCol3 {
+	position: inherit;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	margin-left: 51%;
+	width: 20%;
+	font-weight: bolder;
+	text-align: left;
+	color: #03C;
+	color: pink;
+}
+
+.statesCol4 {
+	position: inherit;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	margin-left: 76%;
+	width: 20%;
+	font-weight: bolder;
+	text-align: left;
+	color: #03C;
+	color: pink;
+}
+
+.parrotheadsView {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.4em;
+	font-weight: bolder;
+	color: #03C;
+	margin-left: 1%;
+}
+
+.parrotheadsEdit {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.4em;
+	font-weight: bolder;
+	color: #03C;
+	margin-left: 1%;
+}
+
+.parrotheadsDelete {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.4em;
+	color: #03C;
+	margin-left: 1%;
+	margin-right: 2%;
+}
+
+.graytext {
+	color: #999;
+}
+
+h3 {
+	text-align: center;
+}
+
+/*
+	That was the entire "new look"
+*/

@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Dummy</title>
+<script src="jquery-1.9.1.js"></script>
+<script src="handlebars-1.0.0-rc.3.js"></script>
+<script src="ember-1.0.0-rc.2.js"></script>
+<script src="ember-data.js"></script>
+
+<script>
+if (typeof PC == "undefined" || !PC) {
+	var PC = {};
+}
+
+/*
+	Creates router and begins routing based on current url
+	Renders the application template
+	All clases defined as properties
+*/
+PC.BballLeague = Ember.Application.create({
+		LOG_TRANSITIONS: true
+})
+
+/*
+	Define groups of routes that work with a resource (this.resource)
+	
+	dynamic segment: porition of a URL that starts with a : and is followed by
+	an identifier
+*/
+PC.BballLeague.Router.map(function() {
+		this.route("home", { path:"/" });
+		this.resource('team', { path: '/team/:team_id'});
+});
+
+PC.BballLeague.Store = DS.Store.extend({
+		revision: 12,
+		adapter: 'DS.FixtureAdapter'
+});
+
+PC.BballLeague.Team = DS.Model.extend({
+		name: DS.attr('string'),
+		colors: DS.attr('string'),
+		stuff: DS.attr('string')
+})
+
+PC.BballLeague.HomeRoute = Ember.Route.extend({
+		model: function() {
+			return ['Coed', 'Saturdays from 9AM-3PM', 'at Park Center']
+		},
+		setupController: function(controller, model){
+			controller.set('info', model)
+			controller.set('teams',PC.BballLeague.Team.find());
+		}
+});
+
+PC.BballLeague.Team.FIXTURES = [{
+	id: 1,
+	name: 'Celtics',
+	colors: 'Green, White',
+	stuff: 'none'}
+];
+</script>
+<body>
+<script type="text/x-handlebars">
+<h1>Wee</h1>
+{{outlet}}
+</script>
+
+ <script type="text/x-handlebars" data-template-name="home">
+
+    <h3>League Info</h3>
+
+    <ul>
+    {{#each item in info}}
+      <li>{{item}}</li>
+    {{/each}}
+    </ul>
+
+    <h3>Teams</h3>
+
+     {{#if teams.isLoaded}}
+     <ul> 
+       {{#each team in teams}}
+        {{#linkTo "team" team}}
+	<p> {{team.name}} </p>
+        {{/linkTo}}
+	
+       {{/each}}
+     </ul>
+     {{else}}
+     <p class="loading">...Loading teams</p>
+     {{/if}}
+
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="team">
+
+    <h3>Team Page: {{name}}</h3>
+    <h4>id {{id}} </h4>
+    <p> team colors: {{colors}} </p> 
+    <p>Stuff? {{stuff}}</p>
+
+  </script>
+
+</body>
+</html>

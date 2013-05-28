@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	http://www.adobe.com/devnet/html5/articles/flame-on-a-beginners-guide-to-emberjs.html
+	pieces:
+	Application
+	Model
+	View
+	Controller
+	
+	Three parts to the application:
+	input field
+	timeline viewer
+	recent users list
+-->
+	<title>Tweets</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script src="jquery-1.7.1.min.js"></script>
+	<script src="ember-0.9.6.min.js"></script>
+	<script src="Tweetsapp.js"></script>
+</head>
+<body>
+<!--
+	any template beginning with the word view refers to a View that has been
+		defined within your JavasScript code
+		
+	Ember allows developers to use any HTML 5 standard attribute within
+		built-in views.
+		
+	"action" adds functionality to input driven elements; two options:
+		action name, and the target; they form a path to a function
+		contained within an ember object
+		
+	"each" block points to the content array and the HTML contained within it.
+	"this": ebmer keeps a reference to the current index in the {{this}}
+	variable; because the value of each item is a string, you can directly
+	output the value of the current item using {{this}}
+	
+	Ember wraps outputted values in script tags. (doesn't work with HTML attributes).
+	bindAttr: attributes placed within the helper will output as normal,
+	but retain bindings.
+-->
+	<script type="text/x-handlebars">
+		<div id="frm">
+			<b>Load Tweets for: </b>
+			{{view App.TFView placeholder="Twitter username" valueBinding="App.tweetsArray.username"}}
+			<button {{action "loadTweets" target="App.tweetsArray"}}>Go!</button>
+		</div>
+		<div id="content">
+			<div id="recent">
+				<h3>Recent Users</h3>
+				<ol>
+					{{#each App.recentUsersArray.reverse}}
+						<li>
+							<a href="#" title="view again" {{action "searchAgain" target="App.recentUsersArray"}}>{{this}}</a> - 
+							<a href="#" title="remove" {{action "removeUser" target="App.recentUsersArray"}}>X</a>
+						</li>
+					{{/each}}
+				</ol>
+			</div>
+			<div id="tweets">
+				<h3>Tweets</h3>
+				<ul>
+					{{#each App.tweetsArray}}
+						<li>
+							<img {{bindAttr src="avatar"}}" />
+							<span>{{date}}</span>
+							<h3>{{screen_name}}</h3>
+							<p>{{text}}</p>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

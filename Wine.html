@@ -1,0 +1,42 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Ember.js Cellar</title>
+	<link rel="stylesheet" href="Wine.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="ember-0.9.5.min.js"></script>
+	<script src="Wine.js"></script>   
+</head>
+
+<body>
+
+	<script type="text/x-handlebars">
+		<div class="leftArea">
+			{{#each Wine.wineArray tagName="ul" id="wineList"}}
+				<li><a href="#" {{action "loadWine" target="Wine.wineArray"}}>{{name}}</a></li>
+			{{/each}}
+		</div>
+
+		<div id="mainArea">
+			{{#each Wine.wineDisplay}}
+				<div class="form-left-col">
+					<label>Id:</label> <div class="display">{{id}}</div>
+					<label>Name:</label> <div class="display">{{name}}</div>
+					<label>Grapes:</label> <div class="display">{{grapes}}</div>
+					<label>Country:</label> <div class="display">{{country}}</div>
+					<label>Region:</label> <div class="display">{{region}}</div>
+					<label>Year:</label> <div class="display">{{year}}</div>
+				</div>
+				<div class="form-right-col">
+					<img height="300" src="http://coenraets.org/backbone-cellar/part1/pics/{{unbound picture}}"/>
+					<label>Notes:</label>
+					<div class="display">{{description}}</div>
+				</div>
+			{{/each}}
+		</div>
+
+	</script>
+
+</body>
+</html>
